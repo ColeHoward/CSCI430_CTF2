@@ -2,14 +2,14 @@ from website.models import User
 import hashlib
 from website.databases import db
 from flask import render_template, flash, jsonify, redirect, url_for, request, make_response
-from flask_mail import Mail, Message
+# from flask_mail import Mail, Message
 import json
 from functools import wraps
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from website.app_creation import app
 import os
 
-mail = Mail(app)
+# mail = Mail(app)
 app.secret_key = 'dxJO>BQ,7FXsw^s[t*8mC`<&]o|d@F'
 
 def login_required(func):
