@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    padding: 0px;
+    font-family: 'Open Sans';
+    margin: 0;
+}
+form {
+    height: 5vh;
+    margin-top: 20px;
+}
+
+#options-container {
+    width: 100%;
+    margin-top: 5vh;
+}
+#options-outline {
+    width: 50vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+#options-outline input{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 10vw;
+}
+.input-group {
+    height: 10vh;
+    width: 100%;
+    font-size:1.2rem;
+
+    margin-top: 3vh;
+    display: grid;
+    grid-template-columns: 19% 46% 35%;
+    column-gap: 0;
+}
+.input-group .column2 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.input-group .before {
+    float:right;
+    line-height: 8vh;
+    font-size: 1.2em;
+}
+.input-group input, .input-group span {
+    line-height: 8vh;
+}
+.input-group span {
+    display:block;
+    float:right;
+}
+#balance {
+    text-align: center;
+    margin-top: 5vh;
+}
