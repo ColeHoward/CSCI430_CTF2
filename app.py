@@ -9,12 +9,8 @@ from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from website.app_creation import app
 import os
 
-# THIS IS THE GOOD VERSION
 mail = Mail(app)
 app.secret_key = 'dxJO>BQ,7FXsw^s[t*8mC`<&]o|d@F'
-
-
-# User.query.filter(User.email.endswith("@usc.edu")).all()
 
 def login_required(func):
     @wraps(func)
@@ -197,21 +193,6 @@ def close_account():
     return resp
 
 
-# @app.route('/reset', methods=['GET'])
-# def reset():
-#     if request.method == "GET":
-#         username = 'root'
-#         password = request.args.get('pass')
-#
-#         user = User.query.filter_by(username=username).first()
-#         if password is not None:
-#             user.password = generate_password_hash(password, method='md5')
-#             db.session.commit()
-#             flash('Password Updated!', category='success')
-#             return redirect(url_for('login'))
-#     return render_template('reset_token.html')
-
-
 # where the user enters their email in to get a form sent to it
 @app.route('/reset-password', methods=['GET', 'POST'])
 def reset_request():
@@ -286,6 +267,5 @@ def send_reset_email(user):
 
 # only if we execute this file, and did not import it, should the app be run
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(port=80)
 
-    #  ssl_context='adhoc'
